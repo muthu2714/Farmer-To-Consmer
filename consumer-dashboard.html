@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect | Consumer Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="container nav-wrap dashboard-nav">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <span class="brand-name">AgriConnect</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="./index.html">Home</a>
+          <a href="#products">Shop</a>
+          <a href="#orders">Orders</a>
+          <a href="#cart">Cart</a>
+        </nav>
+        <div class="nav-actions">
+          <span id="user-label" class="user-label"></span>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="container">
+        <section class="consumer-toolbar panel">
+          <div class="toolbar-filters">
+            <input id="product-search" type="text" placeholder="Search products..." />
+            <select id="category-filter">
+              <option value="">All categories</option>
+              <option value="Vegetables">Vegetables</option>
+              <option value="Fruits">Fruits</option>
+              <option value="Dairy">Dairy</option>
+              <option value="Grains">Grains</option>
+            </select>
+            <select id="organic-filter">
+              <option value="">All farming methods</option>
+              <option value="true">Organic</option>
+              <option value="false">Conventional</option>
+            </select>
+            <button id="apply-filters" class="btn btn-primary">Apply</button>
+          </div>
+        </section>
+
+        <section class="dashboard-grid consumer-grid">
+          <div class="panel" id="products">
+            <div class="panel-header">
+              <h3>Fresh Products</h3>
+            </div>
+            <div id="consumer-products" class="product-grid dashboard-product-grid"></div>
+          </div>
+
+          <aside class="panel" id="cart">
+            <div class="panel-header">
+              <h3>Cart</h3>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+              <strong>Total: ₹<span id="cart-total">0</span></strong>
+              <div class="delivery-slot-group">
+                <label for="delivery-slot">Delivery slot</label>
+                <select id="delivery-slot">
+                  <option value="2026-09-12 10:00 AM - 12:00 PM">2026-09-12 10:00 AM - 12:00 PM</option>
+                  <option value="2026-09-12 2:00 PM - 4:00 PM">2026-09-12 2:00 PM - 4:00 PM</option>
+                  <option value="2026-09-13 8:00 AM - 10:00 AM">2026-09-13 8:00 AM - 10:00 AM</option>
+                </select>
+              </div>
+              <button id="checkout-btn" class="btn btn-primary btn-block">Place Order</button>
+            </div>
+          </aside>
+        </section>
+
+        <section class="panel" id="orders">
+          <div class="panel-header">
+            <h3>Order History</h3>
+          </div>
+          <div id="consumer-orders" class="stack-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./js/consumer.js"></script>
+  </body>
+</html>

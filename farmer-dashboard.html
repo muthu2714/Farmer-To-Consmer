@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect | Farmer Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="container nav-wrap dashboard-nav">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <span class="brand-name">AgriConnect</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="./index.html">Home</a>
+          <a href="#products">Products</a>
+          <a href="#orders">Orders</a>
+          <a href="#profile">Profile</a>
+        </nav>
+        <div class="nav-actions">
+          <span id="user-label" class="user-label"></span>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="container">
+        <section class="dashboard-overview">
+          <div class="stat-card">
+            <span>Total Products</span>
+            <strong id="total-products">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Total Sales</span>
+            <strong id="total-sales">₹0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Active Orders</span>
+            <strong id="active-orders">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Revenue</span>
+            <strong id="total-revenue">₹0</strong>
+          </div>
+        </section>
+
+        <section class="dashboard-grid">
+          <div class="panel" id="products">
+            <div class="panel-header">
+              <h3>My Products</h3>
+              <button id="add-product-btn" class="btn btn-primary">Add Product</button>
+            </div>
+            <div id="product-list" class="stack-list"></div>
+          </div>
+
+          <div class="panel" id="orders">
+            <div class="panel-header">
+              <h3>Incoming Orders</h3>
+            </div>
+            <div id="order-list" class="stack-list"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="profile">
+          <div class="panel-header">
+            <h3>Profile</h3>
+            <button id="save-profile-btn" class="btn btn-primary">Save</button>
+          </div>
+          <form id="farmer-profile-form" class="profile-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="farm-name">Farm name</label>
+                <input id="farm-name" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="farm-location">Farm location</label>
+                <input id="farm-location" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="farm-method">Farming method</label>
+                <select id="farm-method">
+                  <option value="Organic">Organic</option>
+                  <option value="Conventional">Conventional</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="farm-crops">Crop types</label>
+                <input id="farm-crops" type="text" placeholder="Tomato, Carrot, Rice" />
+              </div>
+              <div class="form-group full-width">
+                <label for="farm-bio">Bio</label>
+                <textarea id="farm-bio" rows="3"></textarea>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="panel-header">
+          <h3>Add Product</h3>
+          <button class="modal-close" id="close-product-modal" aria-label="Close">×</button>
+        </div>
+        <form id="product-form" class="auth-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="product-name">Product name</label>
+              <input id="product-name" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="product-category">Category</label>
+              <select id="product-category">
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Grains">Grains</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="product-price">Price</label>
+              <input id="product-price" type="number" min="1" required />
+            </div>
+            <div class="form-group">
+              <label for="product-unit">Unit</label>
+              <input id="product-unit" type="text" value="kg" required />
+            </div>
+            <div class="form-group">
+              <label for="product-stock">Stock</label>
+              <input id="product-stock" type="number" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="product-location">Location</label>
+              <input id="product-location" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="product-harvest">Harvest date</label>
+              <input id="product-harvest" type="date" required />
+            </div>
+            <div class="form-group">
+              <label for="product-organic">Organic</label>
+              <select id="product-organic">
+                <option value="true">Organic</option>
+                <option value="false">Conventional</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="product-image">Image URL</label>
+              <input id="product-image" type="url" />
+            </div>
+            <div class="form-group full-width">
+              <label for="product-description">Description</label>
+              <textarea id="product-description" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="submit" class="btn btn-primary">Save Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/farmer.js"></script>
+  </body>
+</html>

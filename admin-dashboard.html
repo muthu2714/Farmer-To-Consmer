@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect | Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="container nav-wrap dashboard-nav">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <span class="brand-name">AgriConnect</span>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="./index.html">Home</a>
+          <a href="#overview">Overview</a>
+          <a href="#farmers">Farmers</a>
+          <a href="#orders">Orders</a>
+        </nav>
+        <div class="nav-actions">
+          <span id="user-label" class="user-label"></span>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="container">
+        <section class="dashboard-overview" id="overview">
+          <div class="stat-card">
+            <span>Total Farmers</span>
+            <strong id="total-farmers">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Total Consumers</span>
+            <strong id="total-consumers">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Products</span>
+            <strong id="total-products">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Orders</span>
+            <strong id="total-orders">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Revenue</span>
+            <strong id="total-revenue">₹0</strong>
+          </div>
+        </section>
+
+        <section class="dashboard-grid admin-grid">
+          <div class="panel" id="farmers">
+            <div class="panel-header">
+              <h3>Farmers</h3>
+            </div>
+            <div id="admin-farmer-list" class="stack-list"></div>
+          </div>
+
+          <div class="panel" id="orders">
+            <div class="panel-header">
+              <h3>Platform Orders</h3>
+            </div>
+            <div id="admin-order-list" class="stack-list"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Platform Analytics</h3>
+          </div>
+          <div class="chart-box">
+            <canvas id="analytics-chart" width="900" height="240"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect | Register</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-shell">
+      <div class="auth-panel auth-visual auth-visual-alt">
+        <div class="auth-overlay-content">
+          <span class="eyebrow">Create account</span>
+          <h1>Join the marketplace</h1>
+          <p>Grow your farm reach or shop healthier food directly from trusted producers.</p>
+        </div>
+      </div>
+      <div class="auth-panel auth-form-panel">
+        <div class="auth-form-wrap">
+          <div class="brand auth-brand">
+            <div class="brand-mark">A</div>
+            <div>
+              <span class="brand-name">AgriConnect</span>
+            </div>
+          </div>
+          <h2>Register</h2>
+          <form id="register-form" class="auth-form">
+            <div class="form-group">
+              <label for="register-name">Full name</label>
+              <input id="register-name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="register-email">Email</label>
+              <input id="register-email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="register-password">Password</label>
+              <input id="register-password" name="password" type="password" placeholder="Minimum 6 characters" required />
+            </div>
+            <div class="form-group">
+              <label for="register-role">I am a</label>
+              <select id="register-role" name="role">
+                <option value="consumer">Consumer</option>
+                <option value="farmer">Farmer</option>
+              </select>
+            </div>
+            <div class="form-group hidden" id="farmer-fields">
+              <label for="register-farmName">Farm name</label>
+              <input id="register-farmName" name="farmName" type="text" placeholder="Your farm name" />
+            </div>
+            <div class="form-group">
+              <label for="register-location">Location</label>
+              <input id="register-location" name="location" type="text" placeholder="City or farm location" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create account</button>
+            <div id="register-message" class="form-message"></div>
+          </form>
+          <p class="auth-footer">
+            Already have an account? <a href="./login.html">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/auth.js"></script>
+  </body>
+</html>

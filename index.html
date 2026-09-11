@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriConnect | Fresh farm products from farmers to consumers</title>
+    <meta name="description" content="AgriConnect connects local farmers directly with consumers for fresh, traceable agricultural products." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <span class="brand-name">AgriConnect</span>
+          </div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <a href="#home">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#featured">Featured</a>
+          <a href="#farmers">Farmers</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#benefits">Benefits</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="./login.html" class="btn btn-ghost">Login</a>
+          <a href="./register.html" class="btn btn-primary">Join Now</a>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Fresh from farm to table</span>
+            <h1>Healthy food, direct from trusted farmers.</h1>
+            <p>
+              Discover seasonal vegetables, fruits, grains, and dairy products sourced from verified local farms.
+            </p>
+            <div class="hero-search">
+              <input type="text" id="home-search-input" placeholder="Search products, veggies, fruits..." />
+              <button class="btn btn-primary" id="home-search-btn">Search</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>1200+</strong>
+                <span>Farmers</span>
+              </div>
+              <div>
+                <strong>8500+</strong>
+                <span>Orders</span>
+              </div>
+              <div>
+                <strong>98%</strong>
+                <span>Customer satisfaction</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-card card-large">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80" alt="Fresh vegetables" />
+              <div class="floating-badge">
+                <span class="badge-label">Seasonal pick</span>
+                <strong>Organic Harvest Box</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories section" id="categories">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow accent">Shop by category</span>
+            <h2>Fresh offerings across the farm</h2>
+          </div>
+          <div class="category-grid">
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" alt="Vegetables" />
+              <h3>Vegetables</h3>
+              <p>Leafy greens, roots, and kitchen staples.</p>
+            </div>
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=80" alt="Fruits" />
+              <h3>Fruits</h3>
+              <p>Sweet farm-picked fruits in season.</p>
+            </div>
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80" alt="Dairy" />
+              <h3>Dairy</h3>
+              <p>Fresh milk, curd, and farm-made essentials.</p>
+            </div>
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Grains" />
+              <h3>Grains</h3>
+              <p>Whole grains and staple harvests.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products section" id="featured">
+        <div class="container">
+          <div class="section-head with-actions">
+            <div>
+              <span class="eyebrow accent">Featured products</span>
+              <h2>What customers are loving now</h2>
+            </div>
+            <a href="./register.html" class="btn btn-secondary">Become a buyer</a>
+          </div>
+          <div class="product-grid" id="featured-products"></div>
+        </div>
+      </section>
+
+      <section class="farmers section" id="farmers">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow accent">Featured farmers</span>
+            <h2>Meet the growers behind your food</h2>
+          </div>
+          <div class="farmer-grid" id="featured-farmers"></div>
+        </div>
+      </section>
+
+      <section class="how-it-works section" id="how-it-works">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow accent">How it works</span>
+            <h2>Simple steps to shop fresh and support local farms</h2>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-number">1</span>
+              <h3>Explore</h3>
+              <p>Browse food categories and discover trusted farms near you.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">2</span>
+              <h3>Choose</h3>
+              <p>Select quality products and schedule a convenient delivery slot.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-number">3</span>
+              <h3>Receive</h3>
+              <p>Track your order and enjoy fresh produce delivered directly to your home.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits section" id="benefits">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow accent">Why choose us</span>
+            <h2>Freshness, trust, and transparency</h2>
+          </div>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <h3>Verified farmers</h3>
+              <p>Only trusted producers with transparent sourcing and quality checks.</p>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <h3>Direct pricing</h3>
+              <p>No middle layers, just fair farm pricing that keeps value in agriculture.</p>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✓</div>
+              <h3>Seasonal freshness</h3>
+              <p>Order what is harvested now, reducing oversupply and preserving nutrition.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta section">
+        <div class="container cta-box">
+          <div>
+            <span class="eyebrow accent">Join the movement</span>
+            <h2>Support local agriculture and access better food.</h2>
+          </div>
+          <div class="cta-actions">
+            <a href="./register.html" class="btn btn-primary">Create account</a>
+            <a href="./login.html" class="btn btn-secondary">Sign in</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <div class="brand-mark">A</div>
+            <div>
+              <span class="brand-name">AgriConnect</span>
+            </div>
+          </div>
+          <p>Connecting farmers and families for fresher, healthier food choices.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#home">About</a></li>
+            <li><a href="#featured">Products</a></li>
+            <li><a href="#farmers">Farmers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 AgriConnect. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
